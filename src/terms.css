@@ -1,0 +1,159 @@
+.privacy-container {
+    background: linear-gradient(to right, black, rgb(102, 15, 90));
+    padding: 20px;
+    color: white;
+  }
+  
+  .terms-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .link-row {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .link, .active-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+  }
+  
+  .active-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .effective-date {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+  
+
+  .back-arrow {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  
+
+
+  .privacy-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: justify;
+  }
+  
+  .privacy-section p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  
+
+  .information-collect-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  .information-collect-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .information-collect-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .information-collect-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .information-collect-section li {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .emailid{
+    color: rgb(190, 19, 148);
+  }
+
+
+  .contact-us-section {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .contact-us-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: rgb(180, 24, 134);
+  }
+  
+  .contact-item .icon {
+    color: rgb(181, 20, 196);
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  .line{
+    color: white;
+    text-align: center;
+  }
+
+  .privacy-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .privacy-btn {
+    padding: 10px 20px;
+    background-color: rgb(230, 50, 236);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .privacy-btn:hover {
+    background-color: #d8bfff;
+  }
+  

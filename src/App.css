@@ -1,0 +1,41 @@
+.privacy-container {
+  background: linear-gradient(to right, black, lavender);
+  padding: 20px;
+  color: white;
+}
+
+.privacy-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.link-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.link, .active-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin: 10px;
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+}
+
+.effective-date {
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.8;
+}
