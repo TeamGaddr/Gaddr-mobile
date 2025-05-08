@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "priter-app",
   "version": "0.1.0",
   "private": true,
@@ -7,13 +8,22 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+=======
+  "name": "mob-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+>>>>>>> 24f0740380722674f477d4eba50f29bcca8ecfc1
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.5.3",
+=======
+>>>>>>> 24f0740380722674f477d4eba50f29bcca8ecfc1
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
