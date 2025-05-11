@@ -1,32 +1,37 @@
 {
-  "name": "gaddr-mobile",
+<<<<<<< HEAD
+  "name": "priter-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^5.0.0",
     "@fortawesome/fontawesome-free": "^6.7.2",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+=======
+  "name": "mob-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+>>>>>>> 24f0740380722674f477d4eba50f29bcca8ecfc1
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
-    "antd-mobile": "^5.0.0",
-    "axios": "^1.6.0",
-    "dayjs": "^1.11.0",
-    "next": "^14.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-query": "^3.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+<<<<<<< HEAD
     "react-router-dom": "^7.5.3",
-    "zustand": "^4.0.0"
+=======
+>>>>>>> 24f0740380722674f477d4eba50f29bcca8ecfc1
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -45,14 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "typescript": "^5.3.0",
-    "eslint": "^8.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0"
   }
 }
