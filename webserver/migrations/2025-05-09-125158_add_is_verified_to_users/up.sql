@@ -1,0 +1,2 @@
+-- Your SQL goes here
+ALTER TABLE users ADD COLUMN is_verified BOOLEAN DEFAULT FALSE;
