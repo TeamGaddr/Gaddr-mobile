@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico", // Standard favicon
   },
+  viewport: "width=device-width, initial-scale=1", // 关键，移动端适配
 };
 
 export default function RootLayout({
