@@ -1,4 +1,17 @@
-import React from 'react';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+// import { AuthProvider } from "@/lib/auth-context";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "FlowerWork",
+  description: "Hire workforce effortlessly and streamline workflows",
+  icons: {
+    icon: "/favicon.ico", // Standard favicon
+  },
+};
 
 export default function RootLayout({
   children,
@@ -7,9 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
-      <body>
-        {children}
+      <body className={inter.className}>
+        {/* <AuthProvider> */}
+          {children}
+        {/* </AuthProvider> */}
       </body>
     </html>
   );
-} 
+}

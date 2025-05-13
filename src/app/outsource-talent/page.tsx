@@ -1,9 +1,6 @@
-import React from 'react';
+// app/outsource-talent/page.tsx
+import OutsourceTalent from "@/components/OutsourceTalent";
 
-export default function OutsourcePage() {
-  return (
-    <div>
-      <h1>OutsourcePage</h1>
-    </div>
-  );
-} 
+export default function Page() {
+  return <OutsourceTalent />;
+}
