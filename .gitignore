@@ -30,3 +30,4 @@ yarn-error.log*
 .next/
 
 components.json
+"node_modules/\ntarget/\n*.pdb\n*.node" 

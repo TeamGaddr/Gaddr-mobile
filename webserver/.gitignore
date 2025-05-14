@@ -1,0 +1,7 @@
+/target
+/.env
+/.idea/dbnavigator.xml
+
+target/
+*.pdb
+*.node

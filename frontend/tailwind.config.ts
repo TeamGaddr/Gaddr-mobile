@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    darkMode: ["class"],
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,12 +9,12 @@ const config: Config = {
   theme: {
   	extend: {
 		fontFamily: {
-			'montserrat': ['Montserrat', 'sans-serif'],
-			'open-sans': ['Open Sans', 'sans-serif'],  
+			montserrat: ['var(--font-montserrat)', 'sans-serif'],
+			openSans: ['var(--font-open-sans)', 'sans-serif'],  
 		  },
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-  			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+  			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -79,16 +78,11 @@ const config: Config = {
 			bgdarkv3: 'var(--bgdarkv3)',
 			bgdarkv4: 'var(--bgdarkv4)',
 			bgdarkv5: 'var(--bgdarkv5)',
-			bgdarkv6: 'var(--bgdarkv6)',
-			bgdarkv7: 'var(--bgdarkv7)',
-			bgdarkv8: 'var(--bgdarkv8)',
 			purplev1: 'var(--purplev1)',
-			purplev2: 'var(--purplev2)',
-			greyv1: 'var(--greyv1)',
 			cardhover: 'var(--cardhover)',
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
 export default config;

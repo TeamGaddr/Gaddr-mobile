@@ -1,17 +1,46 @@
+import React from 'react';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-// import { AuthProvider } from "@/lib/auth-context";
+import { Open_Sans, Montserrat,Geist, Geist_Mono, Inter } from "next/font/google";
+import './globals.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-montserrat',
+  display: 'swap'
+})
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400','600'],
+  variable: '--font-open-sans',
+  display: 'swap'
+})
+
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "FlowerWork",
+  title: "Gaddr",
   description: "Hire workforce effortlessly and streamline workflows",
   icons: {
     icon: "/favicon.ico", // Standard favicon
   },
-  viewport: "width=device-width, initial-scale=1", // 关键，移动端适配
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -20,8 +49,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="zh">
-      <body className={inter.className}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} antialiased`}>
+      <body className={`${inter.className} `}>
         {/* <AuthProvider> */}
           {children}
         {/* </AuthProvider> */}
