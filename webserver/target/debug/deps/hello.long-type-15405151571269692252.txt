@@ -1,1 +1,0 @@
-for<'a, 'b, 'c> fn(&'a VerificationCodeStore, &'b str, &'c str) -> bool {verification_code::verify_code}: HttpServiceFactory

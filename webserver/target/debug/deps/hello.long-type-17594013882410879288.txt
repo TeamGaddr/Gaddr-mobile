@@ -1,1 +1,0 @@
-fn({type error}, actix_web::web::Path<std::string::String>) -> impl std::future::Future<Output = Result<impl Responder, impl ResponseError>> {verify_email}: HttpServiceFactory
