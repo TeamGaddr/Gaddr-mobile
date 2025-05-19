@@ -1,1 +1,0 @@
-cargo:rustc-env=MIME_TYPES_GENERATED_PATH=F:\FrontCode\FlowerWork_Gaddr\mobile_signup_page\webserver\target\debug\build\mime_guess-7461d340ae7e7e50\out\mime_types_generated.rs
