@@ -10,8 +10,9 @@ import Menu from "@/app/assets/sidebar-icon.svg";
 import { ChevronDown, Lock, Bell, Calendar, Users, Paperclip, Plus, File, Eye } from "lucide-react";
 import TaskCard from "@/app/task-management-dashboard/components/TaskCard";
 import ProjectInfo from "@/app/task-management-dashboard/components/ProjectInfo";
-import AddNewTask from "@/app/task-management-dashboard/components/AddNewTask"
+import AddNewTask from "@/app/task-management-dashboard/components/AddNewTask";
 import { montserrat } from "@/app/fonts";
+import watchIcon from "@/app/assets/watchIcon.svg";
 
 export default function TaskManagementDashboardMobile() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -29,7 +30,7 @@ const [showTaskForm, setShowTaskForm] = useState(false);
 
   return (
     <div
-      className="relative overflow-x-hidden pb-15 min-h-[300px]"
+      className={`relative overflow-x-hidden pb-15 min-h-[300px]`}
       style={{
         background: "linear-gradient(180deg, #282625 0%, #6E1F87 16%)",
       }}>

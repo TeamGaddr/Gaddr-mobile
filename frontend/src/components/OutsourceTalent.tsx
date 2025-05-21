@@ -13,7 +13,7 @@ import { ChevronDown, Bell, Plus, File, Paperclip, Eye, Lock, ChevronLeft} from 
 import MyTagInput from "@/app/components/ui/MyTagInput"
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { montserrat } from "@/app/fonts";
+
 
 
 
@@ -68,7 +68,7 @@ export default function OutsourceTalentMobile() {
 
   const sharedHeader = (
     <div
-      className={`relative overflow-x-hidden pb-10 ${montserrat.className}`}
+      className={`relative overflow-x-hidden pb-10`}
       style={{
         background: "linear-gradient(180deg, #282625 0%, #6E1F87 100%)",
       }}

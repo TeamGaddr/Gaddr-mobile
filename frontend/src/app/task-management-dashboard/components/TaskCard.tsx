@@ -169,7 +169,9 @@ export default function TaskCard({ task }: TaskCardProps) {
         <div
           key={idx}
           className="flex items-center text-xs text-[#827E79] gap-2 p-1 cursor-pointer hover:bg-gray-100"
-          onClick={() => handleOptionClick(label)}
+          {...(label === "Add labels" || label === "Add a subtask"
+            ? {}
+            : { onClick: () => handleOptionClick(label) })}
         >
           <Icon size={14} />
           {label}
