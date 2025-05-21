@@ -50,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${montserrat.variable} ${openSans.variable} antialiased`}>
-      <body className={`${inter.className} `}>
+      <body className={`${inter.className} ${montserrat.className}`}>
         {/* <AuthProvider> */}
           {children}
         {/* </AuthProvider> */}

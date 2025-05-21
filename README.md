@@ -22,8 +22,11 @@ npm start
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# Install diesel CLI
+cargo install diesel_cli --no-default-features --features postgres
+
 # Run development server
-cargo run
+dotenv cargo run
 
 # Build for production
 cargo build --release
@@ -33,6 +36,15 @@ cargo test
 
 # Check code
 cargo check
+
+# Database migrations
+diesel migration run
+
+# Clean build files
+cargo clean
+
+# Update dependencies
+cargo update
 ```
 
 ## Available Scripts
@@ -48,4 +60,7 @@ cargo check
 - `cargo run` - Run development server
 - `cargo build --release` - Build optimized production binary
 - `cargo test` - Run tests
-- `cargo check` - Check code without building 
+- `cargo check` - Check code without building
+- `diesel migration run` - Run database migrations
+- `cargo clean` - Clean build files
+- `cargo update` - Update dependencies 
