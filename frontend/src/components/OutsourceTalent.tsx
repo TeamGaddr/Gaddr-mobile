@@ -13,6 +13,7 @@ import { ChevronDown, Bell, Plus, File, Paperclip, Eye, Lock, ChevronLeft} from 
 import MyTagInput from "@/app/components/ui/MyTagInput"
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { montserrat } from "@/app/fonts";
 
 
 
@@ -67,7 +68,7 @@ export default function OutsourceTalentMobile() {
 
   const sharedHeader = (
     <div
-      className="relative font-montserrat overflow-x-hidden pb-10"
+      className={`relative overflow-x-hidden pb-10 ${montserrat.className}`}
       style={{
         background: "linear-gradient(180deg, #282625 0%, #6E1F87 100%)",
       }}
@@ -462,7 +463,7 @@ const previewView = (
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#282625] to-[#6E1F87] font-montserrat pb-20">
+    <div className="min-h-screen bg-gradient-to-b from-[#282625] to-[#6E1F87] pb-20">
       {sharedHeader}
       {step === "form" ? formView : previewView}
     </div>

@@ -10,6 +10,8 @@ import Menu from "@/app/assets/sidebar-icon.svg";
 import { ChevronDown, Lock, Bell, Calendar, Users, Paperclip, Plus, File, Eye } from "lucide-react";
 import TaskCard from "@/app/task-management-dashboard/components/TaskCard";
 import ProjectInfo from "@/app/task-management-dashboard/components/ProjectInfo";
+import AddNewTask from "@/app/task-management-dashboard/components/AddNewTask"
+import { montserrat } from "@/app/fonts";
 
 export default function TaskManagementDashboardMobile() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,6 +19,7 @@ export default function TaskManagementDashboardMobile() {
   const [projectProgressBar] = useState<number>(5);
   const [tasks, setTasks] = useState(mockTasks);
   const [showAddTask, setShowAddTask] = useState<string | null>(null);
+const [showTaskForm, setShowTaskForm] = useState(false);
 
   const tabs = [
     { id: "todo", label: "To do" },
@@ -26,7 +29,7 @@ export default function TaskManagementDashboardMobile() {
 
   return (
     <div
-      className="relative font-montserrat overflow-x-hidden pb-15 min-h-[300px]"
+      className="relative overflow-x-hidden pb-15 min-h-[300px]"
       style={{
         background: "linear-gradient(180deg, #282625 0%, #6E1F87 16%)",
       }}>
@@ -67,6 +70,7 @@ export default function TaskManagementDashboardMobile() {
 
       <div className="bg-white px-4 pb-10 min-h-[85vh]">
       {/* Tabs */}
+      
       <div className="bg-[#F8F6FA] rounded-xl mx-4 mb-2 p-2">
         <div className="flex justify-between items-center relative w-full">
           {tabs.map((tab) => (
@@ -75,8 +79,8 @@ export default function TaskManagementDashboardMobile() {
               onClick={() => setActiveTab(tab.id as "todo" | "inProgress" | "completed")}
               className={`relative px-4 py-2 text-sm font-bold transition-all duration-150 rounded-xl border ${
                 activeTab === tab.id
-                  ? "bg-white text-[#1C1B1F] border-[#D4C1E8]"
-                  : "bg-[#EDE9E3] text-[#A29DA5] border-transparent"
+                  ? "bg-white text-[#1C1B1F] border-[#D19DE2] border-[1.5px] shadow-[0_2px_8px_rgba(0,0,0,0.09)]"
+                  : "bg-[#E9E7E5] text-[#7A7672] border-transparent"
               }`}
             >
               {tab.label}
@@ -94,7 +98,7 @@ export default function TaskManagementDashboardMobile() {
             onAddTask={() => {
               const newTask = {
                 id: String(Date.now()),
-                name: "New Task",
+                name: "My New Task",
                 assignees: [{ id: 99, name: "New User" }],
                 deadline: "2025-12-31",
                 subtask: 0,
@@ -109,27 +113,48 @@ export default function TaskManagementDashboardMobile() {
             }}
           />
         ))}
-        <button
-          className="w-full mt-4 py-2 border border-dashed border-[#9C2BBF] rounded-lg text-[#9C2BBF] font-semibold flex justify-center items-center gap-2"
-          onClick={() => {
-            const newTask = {
-              id: String(Date.now()),
-              name: "New Task",
-              assignees: [{ id: 99, name: "New User" }],
-              deadline: "2025-12-31",
-              subtask: 0,
-              labelNames: ["Low"],
-              position: tasks[activeTab].length + 1,
-              listName: activeTab === "inProgress" ? "in progress" : activeTab,
-            };
-            setTasks({
-              ...tasks,
-              [activeTab]: [...tasks[activeTab], newTask],
-            });
-          }}
-        >
-          <Plus size={16} /> Add Task
-        </button>
+<>
+<div>
+  {/* 点击后出现的新增卡片 */}
+  {showTaskForm && <AddNewTask
+  listName={
+    activeTab === "inProgress"
+      ? "In Progress"
+      : activeTab === "todo"
+      ? "To Do"
+      : "Done"
+  }
+/>
+}
+
+  {/* 始终显示的按钮 */}
+  <button
+    className="w-full mt-4 py-2 border border-[#9C2BBF] rounded-lg text-[#9C2BBF] font-semibold flex justify-center items-center gap-2"
+onClick={() => {
+  const newTask = {
+    id: String(Date.now()),
+    name: "My New task",
+    assignees: [],
+    deadline: "",
+    labelNames: [],
+    subtask: 0,
+    listName: activeTab, 
+    position: tasks[activeTab].length + 1,
+    isNew: true, 
+  };
+
+  setTasks({
+    ...tasks,
+    [activeTab]: [...tasks[activeTab], newTask],
+  });
+}}
+  >
+    <Plus size={16} /> Add Task
+  </button>
+</div>
+
+</>
+
       </div>
 
       <MobileSidebar isVisible={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
